@@ -1,6 +1,6 @@
 --!strict
 --[[
-	// A cool tablekit
+	Tablekit w/ a lot of utility
 	
 	Version 1.1
 
