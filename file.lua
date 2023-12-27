@@ -1,21 +1,30 @@
 --!strict
---[[ Small table kit made by Reflinders (Github) ]]
--- Version 1.1
---/ ...
+--[[
+	// A cool tablekit
+	
+	Version 1.1
+
+	@ Reflinders
+]]
+
 local tablepack = {
 	Cache = {
 		remove = 't:&r'
 	},
 	CF = {}
 }
+
 -- [[ Types ]]
+
 type mystery = any
 type mysteryTable = {[mystery]: mystery}
 type tab<v> = {[any & v]: any?}
 export type array = tab<number>
 export type dictionary = tab<string>
 export type metatable = typeof(setmetatable({}, {}))
+
 -- [[ Conversions ]]
+
 --[[
 	@ `linger` : practically a queue for values to be added 
 ]]
@@ -300,6 +309,8 @@ function tablepack.CF.getComponents()
 	return CFrame, Vector3, CFrame.new, Vector3.new, CFrame.Angles,
 	math.rad, math.sin, math.asin
 end
---
+
+-- [[ ... ]]
+
 return table.freeze(tablepack.merge(tablepack, table))
 :: typeof(tablepack) & typeof(table)
